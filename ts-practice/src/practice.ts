@@ -1,3 +1,15 @@
-const message: string = 'hello world';
+let count = 0;
+count += 1;
 
-console.log(message);
+const message: string = 'hello world';
+const done: boolean = false;
+
+const numbers: number[]  = [1,2,3];
+const messages: string[] = ['hello', 'world'];
+
+
+let mightBeUndefined: string | undefined = undefined;
+let nullableNUmber: number | null = null;
+
+let color: 'red' | 'orange' | 'yellow' = 'red';
+color = 'yellow';

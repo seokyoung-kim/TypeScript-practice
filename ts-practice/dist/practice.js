@@ -1,3 +1,11 @@
 "use strict";
+var count = 0;
+count += 1;
 var message = 'hello world';
-console.log(message);
+var done = false;
+var numbers = [1, 2, 3];
+var messages = ['hello', 'world'];
+var mightBeUndefined = undefined;
+var nullableNUmber = null;
+var color = 'red';
+color = 'yellow';
