@@ -13,7 +13,7 @@ interface Items<T, V> {
     value: V
 }
 
-const items: Items<number> = {
+const items: Items<number, string> = {
     list: [1,2,3],
     value: 'aaa'
 }
