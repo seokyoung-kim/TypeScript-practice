@@ -1,8 +1,19 @@
-function merge<T1, T2> (a: T1, b: T2) {
+function wrap<T>(param: T) {
     return {
-        ...a,
-        ...b
+        param
     }
 }
 
-const merged = merge({ foo: 1 }, { bar: 2, foobar: 3 })
+const wrapped = wrap('aaa');
+
+wrapped.param
+
+interface Items<T, V> {
+    list: T[]
+    value: V
+}
+
+const items: Items<number> = {
+    list: [1,2,3],
+    value: 'aaa'
+}
