@@ -1,7 +1,8 @@
-function sumArray(numbers: number[]) : number {
-    return numbers.reduce((acc, current) => acc + current, 0)
+function merge<T1, T2> (a: T1, b: T2) {
+    return {
+        ...a,
+        ...b
+    }
 }
 
-const total = sumArray([1,2,3,4,5]);
-
-console.log(total)
+const merged = merge({ foo: 1 }, { bar: 2, foobar: 3 })
