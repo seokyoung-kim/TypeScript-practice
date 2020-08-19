@@ -1,11 +1,29 @@
 "use strict";
-var count = 0;
-count += 1;
-var message = 'hello world';
-var done = false;
-var numbers = [1, 2, 3];
-var messages = ['hello', 'world'];
-var mightBeUndefined = undefined;
-var nullableNUmber = null;
-var color = 'red';
-color = 'yellow';
+var Queue = /** @class */ (function () {
+    function Queue() {
+        this.list = [];
+    }
+    Object.defineProperty(Queue.prototype, "length", {
+        get: function () {
+            return this.list.length;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Queue.prototype.enqueue = function (item) {
+        this.list.push(item);
+    };
+    Queue.prototype.dequeue = function () {
+        return this.list.shift();
+    };
+    return Queue;
+}());
+var queue = new Queue();
+queue.enqueue(0);
+queue.enqueue(1);
+queue.enqueue(2);
+queue.enqueue(3);
+queue.enqueue(4);
+while (queue.length > 0) {
+    console.log(queue.dequeue());
+}
